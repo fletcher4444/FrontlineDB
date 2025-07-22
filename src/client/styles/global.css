@@ -1,0 +1,9 @@
+:root {
+  --bg-main: #1c1c1c;           /* Dark steel */
+  --bg-secondary: #2d2d2d;      /* Gunmetal */
+  --accent-primary: #6e7f51;    /* Olive drab */
+  --accent-secondary: #9e2b25;  /* Blood red */
+  --text-light: #f5f5f5;
+  --text-muted: #b0b0b0;
+  --card-bg: #3c3c3c;
+}

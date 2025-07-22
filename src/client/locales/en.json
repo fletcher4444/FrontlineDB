@@ -1,0 +1,12 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "login": "Login",
+    "register": "Register",
+    "profile": "Profile",
+    "settings": "Settings",
+    "logout": "Logout"
+  }
+}

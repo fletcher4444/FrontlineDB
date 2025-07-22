@@ -1,0 +1,26 @@
+[
+  {
+    "id": "panzer_iv",
+    "name": "Panzer IV",
+    "type": "Medium Tank",
+    "year": 1937,
+    "crew": 5,
+    "armor": "30–80 mm",
+    "mainArmament": "75 mm KwK 40",
+    "speed": "42 km/h",
+    "image": "/assets/images/panzer_iv.png",
+    "history": "The Panzer IV was the workhorse of the German armored forces and saw service throughout the entire war."
+  },
+  {
+    "id": "tiger_i",
+    "name": "Tiger I",
+    "type": "Heavy Tank",
+    "year": 1942,
+    "crew": 5,
+    "armor": "100–120 mm",
+    "mainArmament": "88 mm KwK 36",
+    "speed": "38 km/h",
+    "image": "/assets/images/tiger_i.png",
+    "history": "Known for its powerful gun and thick armor, the Tiger I became a symbol of German tank power."
+  }
+]
