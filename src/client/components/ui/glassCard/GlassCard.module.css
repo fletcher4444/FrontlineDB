@@ -1,0 +1,17 @@
+/* GlassCard.module.css */
+.glassCard {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px var(--shadow-color);
+  padding: 2rem;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.glassCard:hover {
+  box-shadow: 0 12px 32px var(--shadow-color);
+  transform: translateY(-4px);
+}

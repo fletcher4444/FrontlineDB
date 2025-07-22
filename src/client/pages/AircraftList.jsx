@@ -33,7 +33,7 @@
 
 // export default AircraftList;
 import React, { useEffect, useState } from 'react';
-
+import {AirCraftList} from '../data/aircraft'; // Adjust the import path as necessary
 const AircraftList = () => {
   const [aircraftData, setAircraftData] = useState({});
   const [selectedCountry, setSelectedCountry] = useState('USA');
