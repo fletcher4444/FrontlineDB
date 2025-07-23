@@ -161,3 +161,6 @@ export const AircraftData = {
   Russia: russianAircraft,
   Japan: JapanAircraft
 };
+
+
+export default AircraftData;

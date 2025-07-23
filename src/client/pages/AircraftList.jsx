@@ -1,69 +1,52 @@
-// import React, { useState } from 'react';
-// import { AircraftData } from './AircraftData';
+import React, { useState } from 'react';
+import { AircraftData } from '../data/aircraft'; // Adjust path as needed
+import "../styles/airplane.css";
 
-// const AircraftList = () => {
-//   const [selectedCountry, setSelectedCountry] = useState('USA');
 
-//   const handleChange = (e) => {
-//     setSelectedCountry(e.target.value);
-//   };
-
-//   const aircraftList = AircraftData[selectedCountry].aircraft;
-
-//   return (
-//     <div className="p-4">
-//       <select value={selectedCountry} onChange={handleChange}>
-//         {Object.keys(AircraftData).map((country) => (
-//           <option key={country} value={country}>
-//             {AircraftData[country].name}
-//           </option>
-//         ))}
-//       </select>
-
-//       <ul className="mt-4 space-y-2">
-//         {aircraftList.map((plane) => (
-//           <li key={plane.id}>
-//             ✈️ <strong>{plane.name}</strong> - {plane.type} ({plane.yearIntroduced})
-//           </li>
-//         ))}
-//       </ul>
-//     </div>
-//   );
-// };
-
-// export default AircraftList;
-import React, { useEffect, useState } from 'react';
-import {AirCraftList} from '../data/aircraft'; // Adjust the import path as necessary
+// Adjust path as needed
 const AircraftList = () => {
-  const [aircraftData, setAircraftData] = useState({});
   const [selectedCountry, setSelectedCountry] = useState('USA');
 
-  useEffect(() => {
-    fetch('/api/aircraft')
-      .then(res => res.json())
-      .then(data => setAircraftData(data));
-  }, []);
+  const handleChange = (e) => {
+    setSelectedCountry(e.target.value);
+  };
 
-  if (!aircraftData[selectedCountry]) return <p>Loading...</p>;
+  const aircraftList = AircraftData[selectedCountry]?.aircraft ?? [];
 
   return (
-    <div>
-      <select onChange={(e) => setSelectedCountry(e.target.value)}>
-        {Object.keys(aircraftData).map((country) => (
-          <option key={country} value={country}>
-            {aircraftData[country].name}
+    <div className="p-6 max-w-2xl mx-auto">
+      <h1 className="text-2xl font-bold mb-4">WWII Aircraft by Country</h1>
+
+      <label htmlFor="country" className="block mb-2 font-medium">Select Country:</label>
+      <select
+        id="country"
+        value={selectedCountry}
+        onChange={handleChange}
+        className="border p-2 rounded w-full mb-6"
+      >
+        {Object.keys(AircraftData).map((countryKey) => (
+          <option key={countryKey} value={countryKey}>
+            {AircraftData[countryKey].name}
           </option>
         ))}
       </select>
 
-      <ul>
-        {aircraftData[selectedCountry].aircraft.map((aircraft) => (
-          <li key={aircraft.id}>
-            {aircraft.name} - {aircraft.type}
+      <h2 className="text-xl font-semibold mb-3">
+        Aircraft from {AircraftData[selectedCountry].name}
+      </h2>
+
+      <ul className="space-y-2">
+        {aircraftList.map((aircraft) => (
+          <li key={aircraft.id} className="border rounded p-3 bg-gray-100 dark:bg-gray-800">
+            ✈️ <strong>{aircraft.name}</strong>  
+            <div className="text-sm text-gray-700 dark:text-gray-300">
+              Type: {aircraft.type} | Manufacturer: {aircraft.manufacturer} | Year: {aircraft.yearIntroduced}
+            </div>
           </li>
         ))}
       </ul>
     </div>
   );
 };
+
 export default AircraftList;

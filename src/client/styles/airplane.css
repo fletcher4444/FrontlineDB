@@ -1,0 +1,43 @@
+/* aircraft.css */
+.aircraft-list {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.aircraft-item {
+  border: 1px solid #e01010;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+}
+.aircraft-item strong {
+  display: block;
+  font-size: 1.1rem;
+}
+
+.aircraft-item p {
+  margin: 5px 0;
+  color: #333;
+}
+.aircraft-item .country {
+  font-style: italic;
+  color: #555;
+}
+.aircraft-item .type {
+  font-weight: bold;
+  color: #e01010;
+}
+.aircraft-item .capacity {
+  color: #43474c;
+  scrollbar-darkshadow-color: #e01010;
+  font-weight: bold;            
+}
+.aircraft-item .range {
+  color: #28a745;
+  font-weight: bold;
+}
+.aircraft-item .speed {
+  color: #ffc107;
+  font-weight: bold;
+}
