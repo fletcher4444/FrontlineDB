@@ -1,0 +1,93 @@
+.home-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-color, #f5f5f5);
+  color: var(--text-color, #222);
+}
+
+.home-header {
+  padding: 2rem 0 1rem 0;
+  text-align: center;
+  background: var(--glass-bg, rgba(255,255,255,0.7));
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.home-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: var(--hover-color, #de1818ad);
+}
+
+.home-header p {
+  margin: 0.5rem 0 0 0;
+  font-size: 1.2rem;
+}
+
+.home-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.features {
+  margin-bottom: 2rem;
+  background: var(--glass-bg, #fff);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.features h2 {
+  margin-bottom: 1rem;
+  color: var(--hover-color, #de1818ad);
+}
+
+.features ul {
+  list-style: disc inside;
+  padding: 0;
+  margin: 0;
+}
+
+.features li {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.cta {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.cta h2 {
+  margin-bottom: 0.5rem;
+  color: var(--hover-color, #de1818ad);
+}
+
+.cta-button {
+  margin-top: 1rem;
+  padding: 0.7rem 2rem;
+  font-size: 1.1rem;
+  background: var(--hover-color, #de1818ad);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.cta-button:hover {
+  background: #b01010;
+}
+
+.home-footer {
+  text-align: center;
+  padding: 1rem 0;
+  background: var(--glass-bg, rgba(255,255,255,0.7));
+  font-size: 0.95rem;
+  color: #888;
+  border-top: 1px
+}

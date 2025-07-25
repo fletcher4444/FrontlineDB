@@ -1,5 +1,6 @@
 import React from 'react';
 import NavbarComponent from './NavbarComponent';
+import AnimatgedTitle from '../Title';
 import {
   FiHome,
   FiInfo,
@@ -69,7 +70,10 @@ const handleLogin = async () => {
 />
 
       <main>
-        <h1 style={{ padding: '2rem' }}>Welcome to FrontlineDb!</h1>
+        <h1 style={{ padding: '2rem' }}>
+          <AnimatgedTitle text="Welcome to FrontlineDb" />
+
+        </h1>
       </main>
     </>
   );

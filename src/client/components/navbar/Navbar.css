@@ -1,13 +1,17 @@
 /* === THEME VARIABLES === */
 :root {
   --bg-color: #f5f5f5;
-  --text-color: #1a1a1a;
+  --text-color: #de1818ad;
   --hover-color: #007acc;
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --border-color: rgba(0, 0, 0, 0.1);
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --blur: 12px;
 
   --glass-bg: rgba(255, 255, 255, 0.5);
   --border-color: rgba(0, 0, 0, 0.05);
   --shadow-color: rgba(0, 0, 0, 0.1);
-  --blur: 16px;
+  --blur: 26px;
 
   --dropdown-bg: #fff;
   --dropdown-text: #1a1a1a;
@@ -17,13 +21,13 @@
 body[data-theme="dark"] {
   --bg-color: #1c1c1c;
   --text-color: #f0f0f0;
-  --hover-color: #3ecf8e;
+  --hover-color: #ef120e;
 
-  --glass-bg: rgba(20, 20, 20, 0.7);
-  --border-color: rgba(255, 255, 255, 0.1);
-  --shadow-color: rgba(0, 0, 0, 0.5);
+  --glass-bg: rgba(124, 119, 119, 0.7);
+  --border-color: rgba(224, 13, 13, 0.964);
+  --shadow-color: rgba(187, 178, 178, 0.956);
 
-  --dropdown-bg: #2a2a2a;
+  --dropdown-bg: #908686;
   --dropdown-text: #e0e0e0;
   --dropdown-hover: #333333;
 }

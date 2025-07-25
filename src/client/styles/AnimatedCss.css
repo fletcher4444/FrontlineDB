@@ -1,0 +1,18 @@
+h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  text-align: center;
+  margin: 3rem auto;
+  display: inline-block;
+  text-shadow:
+    0 0 5px rgba(255, 255, 255, 0.2),
+    0 0 10px rgba(226, 42, 9, 0.575),
+    0 0 20px rgb(247, 8, 8),
+    0 0 40px rgba(29, 28, 29, 0.904);
+
+  background: linear-gradient(90deg, #ff00cc, #3333ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

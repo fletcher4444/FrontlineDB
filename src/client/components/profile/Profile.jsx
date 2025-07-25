@@ -1,19 +1,31 @@
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
+import { Link } from "react-router-dom";
 
-const Profile = () => {
-  const { user, isAuthenticated, isLoading } = useAuth0();
-
-  if (isLoading) return <div>Loading...</div>;
-  if (!isAuthenticated) return null;
+const Navbar = ({ toggleTheme, theme }) => {
+  const { loginWithRedirect, logout, isAuthenticated } = useAuth0();
 
   return (
-    <div>
-      <img src={user.picture} alt={user.name} className="avatar" />
-      <h2>{user.name}</h2>
-      <p>{user.email}</p>
-    </div>
+    <nav>
+      <ul>
+        {isAuthenticated ? (
+          <li>
+            <button onClick={() => logout({ returnTo: window.location.origin })}>
+              Logout
+            </button>
+          </li>
+        ) : (
+          <li>
+            <Link to="/login" onClick={loginWithRedirect}>Login</Link>
+          </li>
+        )}
+      </ul>
+
+      <button className="theme-toggle" onClick={toggleTheme}>
+        {theme === "light" ? "🌞" : "🌜"}
+      </button>
+    </nav>
   );
 };
 
-export default Profile;
+export default Navbar;
